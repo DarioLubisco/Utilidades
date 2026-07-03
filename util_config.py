@@ -67,8 +67,10 @@ def load_db_password() -> str:
             if pw := _parse_sql_password_from_md(text):
                 return pw
 
-    # Fallback documentado en SSOT (mismo valor que scripts históricos)
-    return "Twinc3pt."
+    raise RuntimeError(
+        "No se encontró MSSQL_SA_PASSWORD. "
+        "Define la variable de entorno o crea .env en la raíz de source."
+    )
 
 
 def get_sql_server(use_zerotier: bool = True) -> str:

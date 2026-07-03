@@ -1,8 +1,14 @@
-__pycache__/
-*.pyc
 .env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
 .venv/
+venv/
 *.log
+scratch/
+*credential*
+*CREDENTIAL*
 .DS_Store
 deploy_to_remote.py
 run_remote_test.py

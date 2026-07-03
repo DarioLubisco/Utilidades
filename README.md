@@ -6,7 +6,7 @@ Scripts portables para corregir fechas y cierre de mes en **EnterpriseAdmin_AMC*
 
 - **SQL Server (ZeroTier):** `10.147.18.192\efficacis3`
 - **SQL Server (LAN):** `10.200.8.5\efficacis3` (fallback automático)
-- **Credenciales:** leídas desde la carpeta `source` de la PC de Dario (`10.147.18.43`)
+- **Credenciales:** variable de entorno `MSSQL_SA_PASSWORD` o archivo `.env` en la raíz de `source` (ver `.env.example`)
 
 ### Rutas locales buscadas (en orden)
 
@@ -14,7 +14,7 @@ Scripts portables para corregir fechas y cierre de mes en **EnterpriseAdmin_AMC*
 2. `C:\Users\DARIO LUBISCO\OneDrive\Sistemas\AntigravityBK\source`
 3. Variable de entorno `AMC_SOURCE_ROOT`
 
-Archivo de credenciales: `N8N/synapse_credentials.md`
+Opcional: `N8N/synapse_credentials.md` (solo local, gitignored) como respaldo legacy.
 
 ## Scripts
 
@@ -23,6 +23,8 @@ Archivo de credenciales: `N8N/synapse_credentials.md`
 | `fix_saconf_dates_yesterday.py` | Ajusta `SACONF` (FechaUC, FechaUP, MesCurso) a ayer |
 | `fix_fechas_futuras_saitemcom_salote.py` | Corrige fechas futuras en compras/lotes + UpdatePrices |
 | `fix_dates_facturas.py` | Corrige facturas específicas: `python fix_dates_facturas.py 00106048` |
+
+Scripts de diagnóstico adicionales en `saint/` (checks e investigaciones puntuales).
 
 ## Uso
 
