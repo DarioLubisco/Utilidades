@@ -15,7 +15,7 @@ from pathlib import Path
 ZEROTIER_SQL_HOST = "10.147.18.192"       # SRV-DC-AMC (SQL Server Saint)
 ZEROTIER_SQL_INSTANCE = "efficacis3"
 ZEROTIER_PC_HOST = "10.147.18.43"         # Dario Desktop AMC
-ZEROTIER_WEBSERVICES = "10.147.18.204"    # Debian / n8n / Docker
+ZEROTIER_WEBSERVICES = "10.147.18.4"    # Debian / n8n / Docker
 
 # LAN fallback (solo cuando estás en la red local AMC)
 LAN_SQL_HOST = "10.200.8.5"
